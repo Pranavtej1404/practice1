@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Markdown Styles for Article Content */
+.prose {
+  @apply text-slate-800 leading-relaxed;
+}
+.prose h1 {
+  @apply text-3xl font-bold mb-4 mt-8;
+}
+.prose h2 {
+  @apply text-2xl font-semibold mb-4 mt-8 pb-2 border-b border-slate-200;
+}
+.prose h3 {
+  @apply text-xl font-medium mb-3 mt-6;
+}
+.prose p {
+  @apply mb-4;
+}
+.prose a {
+  @apply text-blue-600 hover:text-blue-800 underline underline-offset-2;
+}
+.prose ul {
+  @apply list-disc list-inside mb-4 space-y-1;
+}
+.prose ol {
+  @apply list-decimal list-inside mb-4 space-y-1;
+}
+.prose blockquote {
+  @apply border-l-4 border-blue-500 pl-4 py-1 my-4 italic text-slate-600 bg-blue-50/50;
+}
+.prose code {
+  @apply bg-slate-100 px-1.5 py-0.5 rounded text-sm text-pink-600 font-mono;
+}
+.prose pre {
+  @apply bg-slate-900 text-slate-50 p-4 rounded-lg overflow-x-auto my-4 text-sm font-mono block;
+}
+.prose pre code {
+  @apply bg-transparent text-inherit p-0;
+}
+.prose img {
+  @apply rounded-lg shadow-sm border border-slate-200 my-6 max-w-full;
+}
+.prose hr {
+  @apply my-8 border-slate-200;
+}
